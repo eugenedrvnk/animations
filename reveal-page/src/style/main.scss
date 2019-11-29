@@ -1,0 +1,34 @@
+@import 'front_page.scss';
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.front_page, .back_page, .transition {
+  position: fixed;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.reversed {
+  width: 100%;
+  height: 100%;
+}
+
+.translated {
+  background-color: black;
+  overflow: hidden;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
