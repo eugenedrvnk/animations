@@ -20,24 +20,24 @@ class Reveal {
 }
 
 
-CSSPlugin.defaultForce3D = false; // prevent blur bug with text in chrome
+// CSSPlugin.defaultForce3D = false; // prevent blur bug with text in chrome
 
 let a = new Reveal(document.querySelector('.front_page'), -15)
 // let b = new Reveal(document.querySelector('.transition'), 15)
 
-setTimeout(() => {
-  gsap.to(a.translated, {
-    y: '-100%',
-    duration: 1.5,
-    ease: "expo.inOut"
-  })
-  gsap.to(a.reversed, {
-    y: '100%',
-    duration: 1.5,
-    ease: "expo.inOut"
-  })
+// setTimeout(() => {
+//   gsap.to(a.translated, {
+//     y: '-100%',
+//     duration: 1.5,
+//     ease: "expo.inOut"
+//   })
+//   gsap.to(a.reversed, {
+//     y: '100%',
+//     duration: 1.5,
+//     ease: "expo.inOut"
+//   })
 
-}, 1000);
+// }, 1000);
 
 // setTimeout(() => {
 //   gsap.to(b.translated, {
@@ -52,5 +52,3 @@ setTimeout(() => {
 //   })
 
 // }, 1800);
-
-
