@@ -1,0 +1,28 @@
+.preloader {
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgb(168, 135, 118); 
+  z-index: 999; 
+  position: fixed; 
+  left: 0; 
+  top: 0;
+  overflow: hidden;
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      height: 4px;
+      width: 4px;
+      background-color: white;
+      &:first-child {
+        border-radius: 20px 0 0 20px;
+      }
+      &:last-child {
+        border-radius: 0 20px 20px 0;
+      }
+    }
+  }
+}

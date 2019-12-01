@@ -1,14 +1,18 @@
 @import 'front_page.scss';
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import 'preloader.scss';
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
   text-align: center;
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lacquer', sans-serif;
+  background-color: black;
+  font-size: 16px;
 }
 
 .front_page, .back_page, .transition {
@@ -24,8 +28,13 @@ body {
   height: 100%;
 }
 
+.rotated {
+  will-change: transform;
+}
+
 .translated {
   overflow: hidden;
+  will-change: transform;
 }
 
 .centered {

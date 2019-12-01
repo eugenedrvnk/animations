@@ -8,6 +8,22 @@
 </head>
 
 <body>
+<div class="preloader">
+  <div class="wrapper">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
 <div class="front_page centered">
     <div class="rotated centered">
       <div class="translated centered">
@@ -34,15 +50,22 @@
       </div>
     </div>
    </div>
-   <div class="back_page revealer">
+   <div class="back_page revealer" style="position: fixed; width: 100vw; height: 100vh; left: 0; top: 0; z-index: 10;">
+    <div class="rotated centered">
+      <div class="translated centered" style="background-color: rgb(255, 255, 255); width: 100vw; height: 100vh;">
+        <div class="reversed" style="width: 100vw; height: 100vh;">
+  <h1 class="content">321123</h1>          
+        </div>
+      </div>
+    </div>
     </div>
 
-    <!-- <div class="transition centered">
+    <div class="transition centered" style="z-index: 22; pointer-events: none;">
       <div class="rotated">
-        <div class="translated">
+        <div class="translated" style="background-color: #ac8b79; z-index: 20;">
           <div class="reversed q"></div>
         </div>
       </div>
-    </div> -->
+    </div>
 
 </body>
