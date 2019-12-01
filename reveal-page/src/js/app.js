@@ -89,7 +89,7 @@ function showBack() {
   tl.restart()
   tl
   .to(frontPage.img, {y: -150, x: -50, rotation: -10, opacity: 0}, 0)
-  .to(frontPage.reveal.translated, {y: '-100%',}, 0)
+  .to(frontPage.reveal.translated, {y: '-100%'}, 0)
   .to(frontPage.reveal.reversed, {y: '100%',}, 0)
   .to(transPage.translated, {y: '-100%',}, duration/1.8)
   .to(transPage.reversed, {y: '100%',}, duration/1.8)
