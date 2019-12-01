@@ -27,6 +27,7 @@ let frontPage = {
   self: document.querySelector('.front_page'),
   centerTitle: document.querySelector('.front_page .center_title'),
   centerEnter: document.querySelector('.front_page .center_enter'),
+  img: document.querySelector('.front_page img'),
   reveal: null
 }
 
@@ -73,7 +74,6 @@ let tl = gsap.timeline({defaults: {
   duration: 1.5,
   ease: "expo.inOut"
 }});
-tl.pause();
 
 frontPage.reveal = new Reveal(document.querySelector('.front_page'), -15)
 let transPage = new Reveal(document.querySelector('.transition'), 15)
@@ -86,8 +86,9 @@ function showBack() {
   let duration = tl.vars.defaults.duration;
   frontPage.reveal.wrapper.style.pointerEvents = 'none';
 
-  tl.resume()
+  tl.restart()
   tl
+  .to(frontPage.img, {y: -150, x: -50, rotation: -10, opacity: 0}, 0)
   .to(frontPage.reveal.translated, {y: '-100%',}, 0)
   .to(frontPage.reveal.reversed, {y: '100%',}, 0)
   .to(transPage.translated, {y: '-100%',}, duration/1.8)
@@ -95,9 +96,8 @@ function showBack() {
 }
 
 function showFront() {
-  
+  tl.reverse()
+  frontPage.reveal.wrapper.style.pointerEvents = 'all';
 }
 
-document.ondblclick = () => {
-  tl.reverse()
-}
+document.ondblclick = showFront;
