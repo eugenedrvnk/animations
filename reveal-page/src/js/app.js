@@ -31,6 +31,13 @@ let frontPage = {
   reveal: null
 }
 
+let backPage = {
+  first: {
+    gallery: document.querySelector('.back_first .gallery'),
+    images: document.querySelectorAll('.back_first .gallery img')
+  }
+}
+
 let animsStatus = {
   centerTitle: false,
 }
@@ -91,6 +98,7 @@ function showBack() {
   .to(frontPage.img, {y: -150, x: -50, rotation: -10, opacity: 0}, 0)
   .to(frontPage.reveal.translated, {y: '-100%'}, 0)
   .to(frontPage.reveal.reversed, {y: '100%',}, 0)
+  .from(backPage.first.gallery, {y: '100px'}, 0)
   .to(transPage.translated, {y: '-100%',}, duration/1.8)
   .to(transPage.reversed, {y: '100%',}, duration/1.8)
 }
