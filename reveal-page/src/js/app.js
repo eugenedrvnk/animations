@@ -98,7 +98,7 @@ function showBack() {
   .to(frontPage.img, {y: -150, x: -50, rotation: -10, opacity: 0}, 0)
   .to(frontPage.reveal.translated, {y: '-100%'}, 0)
   .to(frontPage.reveal.reversed, {y: '100%',}, 0)
-  .from(backPage.first.gallery, {y: '100px'}, 0)
+  .fromTo(backPage.first.images, {y: 150}, {y: 0, ease: "power3.out", duration: 1, stagger: .1}, .5)
   .to(transPage.translated, {y: '-100%',}, duration/1.8)
   .to(transPage.reversed, {y: '100%',}, duration/1.8)
 }

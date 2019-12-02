@@ -8,11 +8,36 @@
 }
 
 .back_first {
+  padding: 50px;
   z-index: 15;
-  margin-left: 50%;
-  margin-top: 20%;
-  width: 50%;
-  height: 80%;
+  margin-top: 15%;
+  width: 100%;
+  height: 85%;
+  .content {
+    display: flex;
+  }
+  .title {
+    width: 50%;
+    max-height: 300px;
+    font-size: 5em;
+    text-align: left;
+    span {
+      display: block;
+      line-height: 65px;
+    }
+    .lastname {
+      padding-left: 40px;
+      &::after {
+        content: '';
+        width: 55px;
+        height: 2px;
+        background-color: black;
+        display: block;
+        margin-top: 35px;
+        margin-left: -40px;
+      }
+    }
+  }
   .gallery {
     display: flex;
     flex-direction: column;
@@ -23,6 +48,30 @@
   }
 }
 
-.back_second {
 
+.back_second {
+  padding: 50px;
+  width: 100%;
+  height: 85%;
+  margin-top: 15%;
+  .content {
+    display: flex;
+    .desc {
+      width: 50%;
+      height: calc(100% - (15% + 300px));
+      p {
+        width: 50%;
+        margin-top: 300px;
+        text-align: left;
+      }
+    }
+    .numbers {
+      span {
+        display: block;
+        font-size: 2.5em;
+        margin-left: 210px;
+        margin-bottom: 260px;
+      }
+    }
+  }
 }
