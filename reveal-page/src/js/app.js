@@ -34,7 +34,12 @@ let frontPage = {
 let backPage = {
   first: {
     gallery: document.querySelector('.back_first .gallery'),
-    images: document.querySelectorAll('.back_first .gallery img')
+    images: document.querySelectorAll('.back_first .gallery img'),
+    title: document.querySelector('.back_first .title')
+  },
+  second: {
+    numbers: document.querySelectorAll('.back_second .numbers span'),
+    desc: document.querySelector('.back_page .desc p')
   }
 }
 
@@ -99,8 +104,11 @@ function showBack() {
   .to(frontPage.reveal.translated, {y: '-100%'}, 0)
   .to(frontPage.reveal.reversed, {y: '100%',}, 0)
   .fromTo(backPage.first.images, {y: 150}, {y: 0, ease: "power3.out", duration: 1, stagger: .1}, .5)
+  .fromTo(backPage.first.title, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease: "power3.out"}, .8)
   .to(transPage.translated, {y: '-100%',}, duration/1.8)
-  .to(transPage.reversed, {y: '100%',}, duration/1.8)
+  // .to(transPage.reversed, {y: '100%',}, duration/1.8)
+  .fromTo(backPage.second.numbers, {scale: 0}, {scale: 1,}, "-=1.3")
+  .fromTo(backPage.second.desc, {autoAlpha: 0, y: 100}, {autoAlpha: 1, y: 0}, "-=1.5")
 }
 
 function showFront() {
