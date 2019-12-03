@@ -39,7 +39,8 @@ let backPage = {
   },
   second: {
     numbers: document.querySelectorAll('.back_second .numbers span'),
-    desc: document.querySelector('.back_page .desc p')
+    desc: document.querySelector('.back_page .desc p'),
+    arrow: document.querySelector('.back_second .arrow')
   }
 }
 
@@ -91,7 +92,7 @@ frontPage.reveal = new Reveal(document.querySelector('.front_page'), -15)
 let transPage = new Reveal(document.querySelector('.transition'), 15)
 
 frontPage.centerEnter.addEventListener('click', showBack)
-  
+backPage.second.arrow.addEventListener('click', showFront)
 
 function showBack() {
 
@@ -106,7 +107,6 @@ function showBack() {
   .fromTo(backPage.first.images, {y: 150}, {y: 0, ease: "power3.out", duration: 1, stagger: .1}, .5)
   .fromTo(backPage.first.title, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease: "power3.out"}, .8)
   .to(transPage.translated, {y: '-100%',}, duration/1.8)
-  // .to(transPage.reversed, {y: '100%',}, duration/1.8)
   .fromTo(backPage.second.numbers, {scale: 0}, {scale: 1,}, "-=1.3")
   .fromTo(backPage.second.desc, {autoAlpha: 0, y: 100}, {autoAlpha: 1, y: 0}, "-=1.5")
 }
@@ -115,5 +115,3 @@ function showFront() {
   tl.reverse()
   frontPage.reveal.wrapper.style.pointerEvents = 'all';
 }
-
-document.ondblclick = showFront;

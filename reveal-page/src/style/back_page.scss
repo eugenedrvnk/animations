@@ -8,6 +8,7 @@
 }
 
 .back_first {
+  pointer-events: none;
   padding: 50px;
   z-index: 15;
   margin-top: 10%;
@@ -54,6 +55,12 @@
   width: 100%;
   height: 90%;
   margin-top: 10%;
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    left: 50px;
+    top: 0;
+  }
   .content {
     display: flex;
     .desc {
